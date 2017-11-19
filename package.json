@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/simonho288/semanticui-nodejs-theming#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "semantic-ui": "^2.2.13"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
