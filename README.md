@@ -19,12 +19,11 @@ $ npm start
 
 Open the browser and browse: `http://localhost:3000`
 
----
 
 MIT License (MIT)
 =====================
 
-Copyright © 2017, Simon Ho`
+Copyright © 2017, Simon Ho
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
