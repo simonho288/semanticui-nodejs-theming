@@ -19,7 +19,9 @@ $ npm start
 
 Open the browser and browse: `http://localhost:3000`
 
-he MIT License (MIT)
+---
+
+MIT License (MIT)
 =====================
 
 Copyright © 2017, Simon Ho`
