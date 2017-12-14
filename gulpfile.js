@@ -4,7 +4,6 @@ const less = require('gulp-less')
 const minifyCSS = require('gulp-csso')
 const runSequence = require('run-sequence')
 const chug = require('gulp-chug')
-const merge = require('merge-stream')
 
 const OUTPUT_DIR = 'public'
 
@@ -39,15 +38,14 @@ gulp.task('build-semantic', () => {
 
 // Copy built Semantic UI files to /public
 gulp.task('copy-semantic', () => {
-	let css = gulp.src('semantic/dist/semantic.min.css')
+	return gulp.src('semantic/dist/semantic.min.css')
 		.pipe(gulp.dest(OUTPUT_DIR + '/css'))
-	let js = gulp.src('semantic/dist/semantic.min.js')
+	gulp.src('semantic/dist/semantic.min.js')
 		.pipe(gulp.dest(OUTPUT_DIR + '/js'))
-	let fonts = gulp.src('semantic/src/themes/default/assets/fonts/**/*')
+	gulp.src('semantic/src/themes/default/assets/fonts/**/*')
 		.pipe(gulp.dest(OUTPUT_DIR + '/css/themes/default/assets/fonts'))
-	let images = gulp.src('semantic/src/themes/default/assets/images/**/*')
+	gulp.src('semantic/src/themes/default/assets/images/**/*')
 		.pipe(gulp.dest(OUTPUT_DIR + '/css/themes/default/assets/images'))
-	return merge(css, js, fonts, images)
 })
 
 // Semantic UI requires jQuery

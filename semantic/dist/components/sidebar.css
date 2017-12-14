@@ -135,7 +135,7 @@ body.pushable {
   z-index: 2;
 }
 body.pushable > .pusher {
-  background: #FFFFFF;
+  background: #F2FAE9;
 }
 
 /* Pusher should inherit background from context */
@@ -614,12 +614,6 @@ body.pushable > .pusher {
   -webkit-transform: scale(0.75);
           transform: scale(0.75);
 }
-
-
-/*******************************
-         Theme Overrides
-*******************************/
-
 
 
 /*******************************
