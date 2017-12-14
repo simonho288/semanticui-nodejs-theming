@@ -37,15 +37,21 @@ gulp.task('build-semantic', () => {
 })
 
 // Copy built Semantic UI files to /public
-gulp.task('copy-semantic', () => {
-	return gulp.src('semantic/dist/semantic.min.css')
-		.pipe(gulp.dest(OUTPUT_DIR + '/css'))
-	gulp.src('semantic/dist/semantic.min.js')
-		.pipe(gulp.dest(OUTPUT_DIR + '/js'))
-	gulp.src('semantic/src/themes/default/assets/fonts/**/*')
-		.pipe(gulp.dest(OUTPUT_DIR + '/css/themes/default/assets/fonts'))
-	gulp.src('semantic/src/themes/default/assets/images/**/*')
-		.pipe(gulp.dest(OUTPUT_DIR + '/css/themes/default/assets/images'))
+gulp.task('copy-semantic-css', () => {
+  return gulp.src('semantic/dist/semantic.min.css')
+    .pipe(gulp.dest(OUTPUT_DIR + '/css'))
+})
+gulp.task('copy-semantic-js', () => {
+  return gulp.src('semantic/dist/semantic.min.js')
+    .pipe(gulp.dest(OUTPUT_DIR + '/js'))
+})
+gulp.task('copy-semantic-fonts', () => {
+  return gulp.src('semantic/src/themes/default/assets/fonts/**/*')
+    .pipe(gulp.dest(OUTPUT_DIR + '/css/themes/default/assets/fonts'))
+})
+gulp.task('copy-semantic-images', () => {
+  return gulp.src('semantic/src/themes/default/assets/images/**/*')
+    .pipe(gulp.dest(OUTPUT_DIR + '/css/themes/default/assets/images'))
 })
 
 // Semantic UI requires jQuery
@@ -57,8 +63,8 @@ gulp.task('copy-jquery', () => {
 // Gulp default task.
 gulp.task('default', () => {
 	runSequence(
-		['html', 'css', 'js', 'images', 'copy-jquery'],
+		[ 'html', 'css', 'js', 'images', 'copy-jquery' ],
 		'build-semantic',
-		'copy-semantic'
+		[ 'copy-semantic-css', 'copy-semantic-js', 'copy-semantic-fonts', 'copy-semantic-images' ]
 	)
 })
