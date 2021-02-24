@@ -2,7 +2,7 @@
 
 This is a steps by steps guild show you how to create a basic Semantic UI theme, customize it, and setup the NodeJS server-side rendering development environment.
 
-The full story is described in this [Blog post](https://blog.simonho.net/semanticui-nodejs-theming)
+The full story is described in this [Blog post](https://blog.simonho.net/2017/11/beautiful-web-design-with-semantic-ui.html)
 
 ## Download and install
 
